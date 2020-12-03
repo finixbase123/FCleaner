@@ -18,7 +18,6 @@ use finixbase123\CleanerCommand;
 class Cleaner extends PluginBase implements Listener {
 
   public $databsae, $data;
-  public static $instance = null;
 
   function onEnable() {
     Server::getInstance()->getPluginManager()->registerEvents($this, $this);
@@ -33,14 +32,6 @@ class Cleaner extends PluginBase implements Listener {
     $this->database->save();
   }
   
-  function onLoad() {
-      self::$instance = $this;
-  }
-  
-  public static function getInstance() {
-      return self::$instance;
-  }
-
   function spawn(ItemSpawnEvent $event) {
     $entity = $event->getEntity();
     if($entity instanceof ItemEntity) {
