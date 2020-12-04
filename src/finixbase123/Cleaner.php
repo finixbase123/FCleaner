@@ -18,7 +18,7 @@ use finixbase123\CleanerCommand;
 class Cleaner extends PluginBase implements Listener {
 
   public $database;
-  public $data;
+  public $db;
 
   function onEnable() {
     Server::getInstance()->getPluginManager()->registerEvents($this, $this);
