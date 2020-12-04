@@ -1,5 +1,5 @@
-name: Cleaner
+name: FCleaner
 main: finixbase123\Cleaner
 auther: finixbase123 [KR]
-version: Alpha. 1
-api: 3.11.8
+version: 1.0
+api: 3.0.0
