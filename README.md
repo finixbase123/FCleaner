@@ -1,2 +1,10 @@
 # Cleaner
- If a player drops an item, it will be deleted 60 seconds after that point. And you can change the second by command.
+---
+## How to use?
+
+- You can use ```/cleaner set [second:int]```
+
+## Next?
+
+- End! Just use that!
+- If you drop items, it'll be cleaned in second you set.
