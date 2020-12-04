@@ -47,5 +47,3 @@ class Cleaner extends PluginBase implements Listener {
     }
   }
 }
-
- ?>
