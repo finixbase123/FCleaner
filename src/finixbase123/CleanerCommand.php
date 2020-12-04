@@ -18,7 +18,6 @@ class CleanerCommand extends Command {
 
   public function execute(CommandSender $sender, string $commandLabel, array $args)
   {
-    $name = strtolower($sender->getName());
     if(!$sender->isOp()) return false;
     if(!isset($args[0]) or !isset($args[1])) {
       $sender->sendMessage(self::PREFIX . '/cleaner set [second : int]');
