@@ -14,6 +14,7 @@ class CleanerCommand extends Command {
 
   public function __construct() {
     parent::__construct('cleaner', 'cleaner', '/cleaner', []);
+    $this->setPermission('op');
   }
 
   public function execute(CommandSender $sender, string $commandLabel, array $args)
