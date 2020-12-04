@@ -19,8 +19,9 @@ class Cleaner extends PluginBase implements Listener {
 
   public $database;
   public $db;
+  public static $instance = null;
 
-  function onEnable() {
+  public function onEnable() {
     Server::getInstance()->getPluginManager()->registerEvents($this, $this);
     @mkdir($this->getDataFolder());
     $this->database = new Config($this->getDataFolder() . 'Data.yml', Config::YAML, ['time' => 60]);
@@ -28,12 +29,20 @@ class Cleaner extends PluginBase implements Listener {
     $this->getServer()->getCommandMap()->register('cleaner', new CleanerCommand());
   }
 
-  function onDisable() {
+  public function onDisable() {
     $this->database->setAll($this->db);
     $this->database->save();
   }
+
+  public function onLoad() {
+    self::$instance = $this;
+  }
+
+  public static function getInstance() {
+    return self::$instance;
+  }
   
-  function spawn(ItemSpawnEvent $event) {
+  public function spawn(ItemSpawnEvent $event) {
     $entity = $event->getEntity();
     if($entity instanceof ItemEntity) {
         static $itemLifeProperty = null;
