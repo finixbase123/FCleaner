@@ -1,4 +1,4 @@
-<a href="https://poggit.pmmp.io/p/Cleaner"><img src="https://poggit.pmmp.io/shield.state/Cleaner"></a>
+[![](https://poggit.pmmp.io/shield.state/FCleaner)](https://poggit.pmmp.io/p/FCleaner)
 ---
 # Cleaner
 ---
